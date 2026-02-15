@@ -167,3 +167,59 @@ Each saved item has the following structure:
   "timestamp": 1234567890
 }
 ```
+
+### Building for Release
+
+To create a distributable zip package of the extension:
+
+#### Local Build
+
+Run the build script:
+```bash
+./build.sh
+```
+
+This will:
+- Extract version from `manifest.json`
+- Package only the necessary extension files
+- Create `readmelater-extension-v{version}.zip`
+- Generate SHA256 checksum file
+
+#### Automated Release (GitHub Actions)
+
+The repository includes a GitHub Actions workflow that automatically builds and releases the extension:
+
+1. **Create a new release:**
+   ```bash
+   # Tag the release
+   git tag v1.0.0
+   git push origin v1.0.0
+   ```
+
+2. **Or create a release through GitHub:**
+   - Go to Releases → Create new release
+   - Choose or create a tag (e.g., `v1.0.0`)
+   - Publish the release
+
+3. **The workflow will automatically:**
+   - Build the extension package
+   - Create a zip file: `readmelater-extension-v{version}.zip`
+   - Generate SHA256 checksum
+   - Attach both files to the GitHub release
+
+#### What Gets Packaged
+
+The release package includes only:
+- `manifest.json`
+- `background.js`
+- `content.js`
+- `content.css`
+- `context-menu-handler.js`
+- `popup/` directory
+- `icons/` directory
+
+Excluded from package:
+- `support/` (development scripts)
+- `README.md`, `structure.md`
+- `.github/` workflows
+- Build artifacts
