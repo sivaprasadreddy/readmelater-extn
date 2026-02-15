@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 450px;
+  min-height: 300px;
+  max-height: 600px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+  color: white;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.counter {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 40px;
+  color: #657786;
+}
+
+.empty-state p {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.empty-state .hint {
+  font-size: 13px;
+  color: #aab8c2;
+}
+
+.tweet-list {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.tweet-item {
+  border-bottom: 1px solid #e1e8ed;
+  padding: 16px 20px;
+  transition: background-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tweet-item:hover {
+  background-color: #f7f9fa;
+}
+
+.tweet-author {
+  font-weight: 700;
+  font-size: 14px;
+  color: #14171a;
+  margin-bottom: 4px;
+}
+
+.tweet-text {
+  font-size: 14px;
+  color: #14171a;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tweet-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tweet-link {
+  font-size: 12px;
+  color: #1da1f2;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.tweet-link:hover {
+  text-decoration: underline;
+}
+
+.done-btn {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: auto;
+}
+
+.done-btn:hover {
+  background-color: #0d8bd9;
+}
+
+.done-btn:active {
+  transform: scale(0.95);
+}
+
+/* Scrollbar styling */
+.tweet-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tweet-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.tweet-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.tweet-list::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Me Later</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📚 Read Me Later</h1>
+      <div class="counter">
+        <span id="tweetCount">0</span> items saved
+      </div>
+    </div>
+
+    <div id="emptyState" class="empty-state">
+      <p>No items saved yet.</p>
+      <p class="hint">Click the 🔖 icon on tweets or right-click any link and select "Read Me Later"!</p>
+    </div>
+
+    <div id="tweetList" class="tweet-list"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
