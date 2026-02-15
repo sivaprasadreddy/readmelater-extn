@@ -2,6 +2,12 @@
 
 A Chrome extension that allows you to save tweets and links to read later.
 
+## Demo
+
+[![Watch the video](https://img.youtube.com/vi/jNY_cGvdjnc/hqdefault.jpg)](https://www.youtube.com/watch?v=jNY_cGvdjnc)
+
+*Click the image to watch the demo on YouTube*
+
 ## Features
 
 - 🔖 Add a "Read Later" button to every tweet on Twitter/X
